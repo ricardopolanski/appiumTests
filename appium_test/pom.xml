@@ -26,7 +26,12 @@
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
         <version>7.10.1</version>
-        </dependency>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.6.0</version> <!-- Or the latest version -->
+    </dependency>
     </dependencies>
 
 </project>
