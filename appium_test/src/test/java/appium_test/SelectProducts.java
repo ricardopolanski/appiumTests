@@ -1,34 +1,22 @@
 package appium_test;
 
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
 
 
 
-public class SelectProducts {
+public class SelectProducts extends androidConfig{
 
     @Test
     public void AddToCartAndCheckCart() throws MalformedURLException, URISyntaxException, InterruptedException
     {
-        UiAutomator2Options options = new UiAutomator2Options();
-        options.setDeviceName("AppiumTestCases");
-        options.setApp("C:/Users/ercirci/Projects/AppiumTestCases/Resources/General-Store.apk");
-                
-        AndroidDriver driver = new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(), options);
-
         Thread.sleep(5000);
         
         driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Ricardo Polanski Alves");
@@ -60,6 +48,11 @@ public class SelectProducts {
         String cartProductPrice = driver.findElement(By.id("com.androidsample.generalstore:id/productPrice")).getText();
         Assert.assertEquals(cartProductName, "Jordan 6 Rings");
         Assert.assertEquals(cartProductPrice, "$165.0");
+    }
+
+    @Test
+    public void checkTotalSum () {
+
     }
 
     public static void main(String[] args) {
