@@ -17,7 +17,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
+    <dependency>
         <groupId>io.appium</groupId>
         <artifactId>java-client</artifactId>
         <version>9.2.2</version>
@@ -32,11 +32,16 @@
         <artifactId>selenium-java</artifactId>
         <version>4.6.0</version> <!-- Or the latest version -->
     </dependency>
-    <dependency>
+    <!-- <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-support</artifactId>
         <version>4.25.0</version>
-    </dependency>
+    </dependency> -->
+    <!-- <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>appium-uiautomator2-driver</artifactId>
+        <version>4.25.0</version>
+    </dependency> -->
     </dependencies>
 
 </project>
